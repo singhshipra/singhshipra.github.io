@@ -1,5 +1,14 @@
-# singhshipra.github.io
-My repository
+# Welcome to Shipra's Repository
+ownClod Quickstart help
+
+[Connecting to the ownCloud server](/Connecting to the ownCloud server.md)
+
+[Installing and configuring an ownCloud server](/Installing and configuring an ownCloud serverREADME.md)
+
+[Creating a User account](/Creating a user account.md)
+
+[Connect to ownCloud using port](/Connect to ownCloud using port.md)
+
 # Recommendation for creating user credentials
 * Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@). 
 # To create a user account
