@@ -1,5 +1,14 @@
-# singhshipra.github.io
-My repository
+# Welcome to Shipra's Repository
+ownClod Quickstart help
+
+[Connecting to the ownCloud server](/Connecting to the ownCloud server.md)
+
+[Installing and configuring an ownCloud server](/Installing and configuring an ownCloud serverREADME.md)
+
+[Creating a User account](/Creating a user account.md)
+
+[Connect to ownCloud using port](/Connect to ownCloud using port.md)
+
 ownCloud is a SAAS-based solution that provides a safe approach for file synchronization and sharing in real time. You can easily share files and folders on your local machine with the ownCloud server deployed and synchronize those files if you make any changes later. 
 You can deploy an ownCloud server on-premises or off-premises depending on your requirements.
 # Prerequisites
