@@ -36,8 +36,7 @@ cd /var/www/owncloud
 sudo -u www-data /usr/bin/php /var/www/owncloud/occ "\$@"
 EOM
 ```
-    Where, _/var/www/owncloud_ is the ownCloud directory.
-
+Where, _/var/www/owncloud_ is the ownCloud directory.
 3. Use the below command to make the helper script executable:
 ```
 chmod +x /usr/local/bin/occ
@@ -64,12 +63,12 @@ apt install -y \
   php-smbclient coreutils php-ldap
 ```
 6. Configure Apache:
-* a) Change the document root:
+  a) Change the document root:
 ```
 sed -i "s#html#owncloud#" /etc/apache2/sites-available/000-default.conf
 service apache2 restart
 ```
-* b) Create a virtual host configuration:
+  b) Create a virtual host configuration:
 ```
 FILE="/etc/apache2/sites-available/owncloud.conf"
 /bin/cat <<EOM >$FILE
@@ -88,7 +87,7 @@ Alias /owncloud "/var/www/owncloud/"
  </Directory>
 EOM
 ```
-* c) Enable the virtual host configuration
+  c) Enable the virtual host configuration
 ```
 a2ensite owncloud.conf
 service apache2 reload
@@ -173,6 +172,6 @@ EOM
  chown -R www-data. owncloud
 ```
 15. For verifying that the installation is successful, perform these steps:
-* a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
-* b) Type your username and password.
-* c) Click the **Log in** button. The ownCloud main interface appears.
+  a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
+  b) Type your username and password.
+  c) Click the **Log in** button. The ownCloud main interface appears.
