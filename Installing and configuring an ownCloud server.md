@@ -17,10 +17,10 @@ For a standard ownCloud server installation, ensure these prerequisites are in p
 * Web server Apache 2.4
 * Database: MySQL/MariaDB with InnoDB storage engine
 * A latest PHP version 
-# Recommendation
+Recommendation
 * To allow ownCloud administrators to have access to both command-line and cron
 * The ownCloud administrator needs to connect as the root user
-# To install and configure ownCloud on Ubuntu
+To install and configure ownCloud on Ubuntu
 1. Run the below command to check all the installed packages are updated and PHP is available in the Advanced Package Tool (APT) repository:
 ```
 apt update && \
