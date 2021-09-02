@@ -21,8 +21,8 @@ Download the latest version of the ownCloud Desktop Sync Client from the ownClou
 2. Type the URL of the ownCloud server, and click **Next**.
 3. Type the ownCloud login credentials, and click **Next**.
 4. Choose one of the following options to setup local folders:
-* Select **Sync everything from server** to sync all your local files with the ownCloud server.
-* Select **Choose what to sync** to sync only required local files or folders with the ownCloud server.
+  * Select **Sync everything from server** to sync all your local files with the ownCloud server.
+  * Select **Choose what to sync** to sync only required local files or folders with the ownCloud server.
 
   <img width="463" alt="Setup local folder option" src="https://user-images.githubusercontent.com/89831069/131791636-54d20489-e437-4b11-a00e-e644ed0955a1.PNG">
   
