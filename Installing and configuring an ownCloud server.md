@@ -18,11 +18,11 @@ For a standard ownCloud server installation, ensure these prerequisites are in p
 * Database: MySQL/MariaDB with InnoDB storage engine
 * A latest PHP version 
 
-Recommendation
+# Recommendation
  * To allow ownCloud administrators to have access to both command-line and cron
  * The ownCloud administrator needs to connect as the root user
 
-To install and configure ownCloud on Ubuntu
+# To install and configure ownCloud on Ubuntu
 1. Run the below command to check all the installed packages are updated and PHP is available in the Advanced Package Tool (APT) repository:
 ```
 apt update && \
@@ -64,6 +64,7 @@ apt install -y \
   php-smbclient coreutils php-ldap
 ```
 6. Configure Apache:
+
 a) Change the document root:
 b) Create a virtual host configuration:
 c) Enable the virtual host configuration
@@ -77,6 +78,7 @@ Run the below command to enable the recommended Apache modules:
 13. Run the below command to configure log rotation:
 14. Complete the installation and check the access permissions are correct using the below command:
 15. For verifying that the installation is successful, perform these steps:
+
 a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
 b) Type your username and password.
 c) Click the **Log in** button. The ownCloud main interface appears.
