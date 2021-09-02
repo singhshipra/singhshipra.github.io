@@ -65,108 +65,17 @@ apt install -y \
 ```
 6. Configure Apache:
 a) Change the document root:
-```
-sed -i "s#html#owncloud#" /etc/apache2/sites-available/000-default.conf
-service apache2 restart
-```
 b) Create a virtual host configuration:
-```
-FILE="/etc/apache2/sites-available/owncloud.conf"
-/bin/cat <<EOM >$FILE
-Alias /owncloud "/var/www/owncloud/"
-<Directory /var/www/owncloud/>
-  Options +FollowSymlinks
-  AllowOverride All
- <IfModule mod_dav.c>
-  Dav off
- </IfModule>
- SetEnv HOME /var/www/owncloud
- SetEnv HTTP_HOME /var/www/owncloud
- </Directory>
-EOM
-```
 c) Enable the virtual host configuration
-```
-a2ensite owncloud.conf
-service apache2 reload
-```
 7. Configure the database:
-```
-service mysql start
-mysql -u root -e "CREATE DATABASE IF NOT EXISTS owncloud; \
-GRANT ALL PRIVILEGES ON owncloud.* \
-TO owncloud@localhost \
-IDENTIFIED BY 'password'";
-```
 Run the below command to enable the recommended Apache modules:
-```
-echo "Enabling Apache Modules"
-a2enmod dir env headers mime rewrite setenvif
-service apache2 reload
-```
 8. Download ownCloud:
-```
-cd /var/www/
-wget https://download.owncloud.org/community/owncloud-10.8.0.tar.bz2 && \
-tar -xjf owncloud-10.8.0.tar.bz2 && \
-chown -R www-data. Owncloud
-```
 9. Install ownCloud:
-```
-occ maintenance:install \
-    --database "mysql" \
-    --database-name "owncloud" \
-    --database-user "owncloud" \
-    --database-pass "password" \
-    --admin-user "admin" \
-    --admin-pass "admin"
-```
 10. Configure the ownCloud’s trusted domains:
-```
-myip=$(hostname -I|cut -f1 -d ' ')
-occ config:system:set trusted_domains 1 --value="$myip"
-```
 11. Run the below command to set your background job mode to cron:
-```
-occ background:cron
-echo "*/15  *  *  *  * /var/www/owncloud/occ system:cron" \
-  > /var/spool/cron/crontabs/www-data
-chown www-data.crontab /var/spool/cron/crontabs/www-data
-chmod 0600 /var/spool/cron/crontabs/www-data
-```
 12. Execute the below commands to configure caching and file locking:
-```
-occ config:system:set \
-   memcache.local \
-   --value '\OC\Memcache\APCu'
-occ config:system:set \
-   memcache.locking \
-   --value '\OC\Memcache\Redis'
-service redis-server start
-occ config:system:set \
-   redis \
-   --value '{"host": "127.0.0.1", "port": "6379"}' \
-   --type json
-```
 13. Run the below command to configure log rotation:
-```
-FILE="/etc/logrotate.d/owncloud"
-sudo /bin/cat <<EOM >$FILE
-/var/www/owncloud/data/owncloud.log {
-  size 10M
-  rotate 12
-  copytruncate
-  missingok
-  compress
-  compresscmd /bin/gzip
-}
-EOM
-```
 14. Complete the installation and check the access permissions are correct using the below command:
- ```
- cd /var/www/
- chown -R www-data. owncloud
-```
 15. For verifying that the installation is successful, perform these steps:
 a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
 b) Type your username and password.
