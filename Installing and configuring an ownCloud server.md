@@ -62,31 +62,28 @@ apt install -y \
   php-smbclient coreutils php-ldap
 ```
 6. Configure Apache:
-* a) Change the document root:
+a) Change the document root:
 ```
 sed -i "s#html#owncloud#" /etc/apache2/sites-available/000-default.conf
 service apache2 restart
 ```
-* b) Create a virtual host configuration:
+b) Create a virtual host configuration:
 ```
 FILE="/etc/apache2/sites-available/owncloud.conf"
 /bin/cat <<EOM >$FILE
 Alias /owncloud "/var/www/owncloud/"
-
 <Directory /var/www/owncloud/>
   Options +FollowSymlinks
   AllowOverride All
-
  <IfModule mod_dav.c>
   Dav off
  </IfModule>
-
  SetEnv HOME /var/www/owncloud
  SetEnv HTTP_HOME /var/www/owncloud
  </Directory>
 EOM
 ```
-* c) Enable the virtual host configuration
+c) Enable the virtual host configuration
 ```
 a2ensite owncloud.conf
 service apache2 reload
@@ -99,7 +96,7 @@ GRANT ALL PRIVILEGES ON owncloud.* \
 TO owncloud@localhost \
 IDENTIFIED BY 'password'";
 ```
-* Run the below command to enable the recommended Apache modules:
+Run the below command to enable the recommended Apache modules:
 ```
 echo "Enabling Apache Modules"
 a2enmod dir env headers mime rewrite setenvif
@@ -140,11 +137,9 @@ chmod 0600 /var/spool/cron/crontabs/www-data
 occ config:system:set \
    memcache.local \
    --value '\OC\Memcache\APCu'
-
 occ config:system:set \
    memcache.locking \
    --value '\OC\Memcache\Redis'
-
 service redis-server start
 occ config:system:set \
    redis \
@@ -171,6 +166,6 @@ EOM
  chown -R www-data. owncloud
 ```
 15. For verifying that the installation is successful, perform these steps:
-* a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
-* b) Type your username and password.
-* c) Click the **Log in** button. The ownCloud main interface appears.
+a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
+b) Type your username and password.
+c) Click the **Log in** button. The ownCloud main interface appears.
