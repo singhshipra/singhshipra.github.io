@@ -62,11 +62,13 @@ apt install -y \
   php-smbclient coreutils php-ldap
 ```
 6. Configure Apache:
+
 a) Change the document root:
 ```
 sed -i "s#html#owncloud#" /etc/apache2/sites-available/000-default.conf
 service apache2 restart
 ```
+
 b) Create a virtual host configuration:
 ```
 FILE="/etc/apache2/sites-available/owncloud.conf"
@@ -83,11 +85,13 @@ Alias /owncloud "/var/www/owncloud/"
  </Directory>
 EOM
 ```
+
 c) Enable the virtual host configuration
 ```
 a2ensite owncloud.conf
 service apache2 reload
 ```
+
 7. Configure the database:
 ```
 service mysql start
