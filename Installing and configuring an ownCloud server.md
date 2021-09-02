@@ -24,7 +24,7 @@ For a standard ownCloud server installation, ensure these prerequisites are in p
  * The ownCloud administrator needs to connect as the root user
 
 # To install and configure ownCloud on Ubuntu
-1. Run the below command to check all the installed packages are updated and PHP is available in the Advanced Package Tool (APT) repository:
+1.Run the below command to check all the installed packages are updated and PHP is available in the Advanced Package Tool (APT) repository:
 
 ```
 apt update && \
