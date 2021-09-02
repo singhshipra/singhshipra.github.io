@@ -1,5 +1,5 @@
-# singhshipra.github.io
-My repository
+# Welcome to Shipra's Repository
+ownClod Quickstart help 
 # Assumption:
 The ownCloud server installation is being done locally.
 # To enable users to connect using local IP and port:
