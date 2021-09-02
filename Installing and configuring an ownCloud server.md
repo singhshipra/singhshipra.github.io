@@ -63,12 +63,11 @@ apt install -y \
 ```
 6. Configure Apache:
 
-* Change the document root:
+  * Change the document root:
 ```
 sed -i "s#html#owncloud#" /etc/apache2/sites-available/000-default.conf
 service apache2 restart
 ```
-
 * Create a virtual host configuration:
 ```
 FILE="/etc/apache2/sites-available/owncloud.conf"
@@ -85,7 +84,6 @@ Alias /owncloud "/var/www/owncloud/"
  </Directory>
 EOM
 ```
-
 * Enable the virtual host configuration
 ```
 a2ensite owncloud.conf
@@ -99,7 +97,7 @@ GRANT ALL PRIVILEGES ON owncloud.* \
 TO owncloud@localhost \
 IDENTIFIED BY 'password'";
 ```
-Run the below command to enable the recommended Apache modules:
+* Run the below command to enable the recommended Apache modules:
 ```
 echo "Enabling Apache Modules"
 a2enmod dir env headers mime rewrite setenvif
