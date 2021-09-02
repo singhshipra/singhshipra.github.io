@@ -1,8 +1,10 @@
 # Welcome to Shipra's Repository
-
+ownClod Quickstart help
 [Connecting to the ownCloud server](/Connecting to the ownCloud server.md)
-[Installing and configuring an ownCloud server](/Connecting to the ownCloud server.md)
-ownClod Quickstart help 
+[Installing and configuring an ownCloud server](/Installing and configuring an ownCloud serverREADME.md)
+[Creating a User account](/Creating a user account.md)
+[Connect to ownCloud using port](/Connect to ownCloud using port.md)
+ 
 # Assumption:
 The ownCloud server installation is being done locally.
 # To enable users to connect using local IP and port:
