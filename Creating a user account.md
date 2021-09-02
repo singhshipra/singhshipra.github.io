@@ -10,7 +10,7 @@ ownClod Quickstart help
 [Connect to ownCloud using port](/Connect to ownCloud using port.md)
 
 # Recommendation for creating user credentials
-* Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@). 
+Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_),_ periods (.) and at signs (@). 
 # To create a user account
 1. Type the _Login Name_ and _E-Mail_ of the user.
 2. Select the group to which this user belongs from the dropdown list, if required.
