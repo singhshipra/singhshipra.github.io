@@ -29,4 +29,4 @@ docker-compose up -d
 ```
 5. Execute the command `docker-compose ps` to verify that all the containers have successfully started.
 
-ownCloud is accessible using the port 8080 on the host machine.
+   ownCloud is accessible using the port 8080 on the host machine.
