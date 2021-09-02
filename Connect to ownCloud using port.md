@@ -1,6 +1,7 @@
 # Welcome to Shipra's Repository
 
 [Connecting to the ownCloud server](/Connecting to the ownCloud server.md)
+[Installing and configuring an ownCloud server](/Connecting to the ownCloud server.md)
 ownClod Quickstart help 
 # Assumption:
 The ownCloud server installation is being done locally.
