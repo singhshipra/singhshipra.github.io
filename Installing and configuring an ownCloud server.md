@@ -11,6 +11,7 @@ ownClod Quickstart help
 
 ownCloud is a SAAS-based solution that provides a safe approach for file synchronization and sharing in real time. You can easily share files and folders on your local machine with the ownCloud server deployed and synchronize those files if you make any changes later. 
 You can deploy an ownCloud server on-premises or off-premises depending on your requirements.
+
 # Prerequisites
 For a standard ownCloud server installation, ensure these prerequisites are in place: 
 * Operating system- Linux (Ubuntu 18.04 or Ubuntu 20.04 with SSH enabled)
@@ -74,14 +75,14 @@ apt install -y \
 
 6. Configure Apache:
 
-a) Change the document root:
+   a) Change the document root:
 
 ```
 sed -i "s#html#owncloud#" /etc/apache2/sites-available/000-default.conf
 service apache2 restart
 ```
 
-b) Create a virtual host configuration:
+   b) Create a virtual host configuration:
 
 ```
 FILE="/etc/apache2/sites-available/owncloud.conf"
@@ -102,7 +103,7 @@ Alias /owncloud "/var/www/owncloud/"
 EOM
 ```
 
-c) Enable the virtual host configuration:
+   c) Enable the virtual host configuration:
 
 ```
 a2ensite owncloud.conf
@@ -211,8 +212,8 @@ chown -R www-data. owncloud
 
 15. For verifying that the installation is successful, perform these steps:
 
-a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
+    a) Type the URL of the ownCloud server in your browser’s address bar. The ownCloud login window appears.
 
-b) Type your username and password.
+    b) Type your username and password.
 
-c) Click the **Log in** button. The ownCloud main interface appears.
+    c) Click the **Log in** button. The ownCloud main interface appears.
